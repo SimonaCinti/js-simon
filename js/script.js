@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     // Chiedi al giocatore di inserire per 5 volte un numero
 
-    setTimeout (gamestart, 32000);
+    setTimeout (gamestart, secondi*1200);
 
     function gamestart () {
         for (i = 0; i < 5; i++){
