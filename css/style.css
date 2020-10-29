@@ -7,5 +7,23 @@ box-sizing: border-box;
 body {
     font-family: sans-serif;
     cursor: default;
-    background-color: indigo;
+    background-color: khaki;
+}
+
+/* Typography */
+h1, h2 {
+    margin-top: 50px;
+}
+
+h2 {
+    color: red;
+}
+
+
+/* Display game */
+
+.game-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
