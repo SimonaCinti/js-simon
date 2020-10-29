@@ -10,17 +10,26 @@ $(document).ready(function(){
     var randomNumber = $('#random-number');
     var collectionNumbers = [];
     var minNumber = 1;
-    var maxNumber = 100;
+    var maxNumber = 10;
     var secondi = 5;
 
     // Creazione numeri random da parte del computer
 
     for ( i = 0; i < 5; i++){
        var selectNumber = Math.floor(Math.random () *( maxNumber - minNumber + 1)) + minNumber;
+       //check number già non presente
+       while (collectionNumbers.includes(selectNumber)){
+           var selectNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+       }
         collectionNumbers += ' ' + selectNumber;
     };
 
-    console.log(collectionNumbers);
+    randomNumber.text(collectionNumbers);
+
+
+
+    // Mostra i numeri su schermo per 30 secondi
+
     
     // var timer = setInterval(function(){
     //     if (secondi == 0){
@@ -33,5 +42,14 @@ $(document).ready(function(){
     //     }
 
     // },1000);
+
+    // Chiedi al giocatore di inserire per 5 volte un numero
+
+
+    //Check che la collezione di numeri sia compresa nei numeri generati dal computer
+
+    // Il software dice quali sono i numeri che sono stati indovinati
+    
+
 
 }); // <--- end doc ready
