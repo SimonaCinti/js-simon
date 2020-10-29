@@ -60,7 +60,8 @@ $(document).ready(function(){
         // Il software dice quali sono i numeri che sono stati indovinati
         console.log('i numeri corretti da te inseriti sono ', score);
         console.log('Hai indovinato nua quantità di numeri pari a ', score.length);
-        $('#random-number').text('i numeri corretti da te inseriti sono' + score);
+        $('#result-list').text('Ecco i numeri che hai indovinato! ' + score);
+        $('#result-score').text('Il totale dei numeri corretti che hai indovinato sono' + score.length);
     }
 
 }); // <--- end doc ready
