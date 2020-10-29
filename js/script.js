@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     function gamestart () {
         for (i = 0; i < 5; i++){
-            playerNumber = parseInt( prompt('Inserisci un numero'));
+            playerNumber = parseInt( prompt('Adesso tocca a te! \nInserisci un numero'));
     
             //Check se il numero inserito è compreso nei numeri generati dal computer 
     
@@ -58,9 +58,9 @@ $(document).ready(function(){
             }
         } 
         // Il software dice quali sono i numeri che sono stati indovinati
-
         console.log('i numeri corretti da te inseriti sono ', score);
         console.log('Hai indovinato nua quantità di numeri pari a ', score.length);
+        $('#random-number').text('i numeri corretti da te inseriti sono' + score);
     }
 
 }); // <--- end doc ready
