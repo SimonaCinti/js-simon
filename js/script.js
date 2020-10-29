@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    
-    console.log('hello js ', $);
+
 
     //Todo 1- Un alert espone 5 numeri casuali diversi.
     //Todo 2 - Dopo 30 secondi l'utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
