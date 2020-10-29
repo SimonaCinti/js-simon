@@ -11,7 +11,7 @@ $(document).ready(function(){
     var collectionNumbers = [];
     var minNumber = 1;
     var maxNumber = 100;
-    var secondi = 5;
+    var secondi = 30;
     var playerNumber;
     var score = [];
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     // Chiedi al giocatore di inserire per 5 volte un numero
 
-    setTimeout (gamestart, 6500);
+    setTimeout (gamestart, 32000);
 
     function gamestart () {
         for (i = 0; i < 5; i++){
