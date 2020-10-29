@@ -10,7 +10,7 @@ $(document).ready(function(){
     var randomNumber = $('#random-number');
     var collectionNumbers = [];
     var minNumber = 1;
-    var maxNumber = 10;
+    var maxNumber = 100;
     var secondi = 5;
 
     // Creazione numeri random da parte del computer
@@ -21,27 +21,26 @@ $(document).ready(function(){
        while (collectionNumbers.includes(selectNumber)){
            var selectNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
        }
-        collectionNumbers += ' ' + selectNumber;
+        collectionNumbers.push(selectNumber);
     };
-
-    randomNumber.text(collectionNumbers);
-
-
+    console.log(collectionNumbers); //?debug
 
     // Mostra i numeri su schermo per 30 secondi
 
     
-    // var timer = setInterval(function(){
-    //     if (secondi == 0){
-    //         console.log('scrivi i numeri!');
-    //         clearInterval(timer);
+    var timer = setInterval(function(){
+        if (secondi == 0){
+            randomNumber.hide();
+            alert('Adesso tocca a te!');
+            clearInterval(timer);
 
-    //     } else {
-    //         alert('numeri casuali');
-    //         secondi --;
-    //     }
+        } else {
+            randomNumber.text(collectionNumbers);
+            console.log(secondi); //? check secondi debug
+            secondi --;
+        }
 
-    // },1000);
+    },1000);
 
     // Chiedi al giocatore di inserire per 5 volte un numero
 
