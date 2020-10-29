@@ -61,7 +61,7 @@ $(document).ready(function(){
         console.log('i numeri corretti da te inseriti sono ', score);
         console.log('Hai indovinato nua quantità di numeri pari a ', score.length);
         $('#result-list').text('Ecco i numeri che hai indovinato! ' + score);
-        $('#result-score').text('Il totale dei numeri corretti che hai indovinato sono' + score.length);
+        $('#result-score').text('Il totale dei numeri corretti che hai indovinato è ' + score.length);
     }
 
 }); // <--- end doc ready
