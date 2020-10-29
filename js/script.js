@@ -12,6 +12,8 @@ $(document).ready(function(){
     var minNumber = 1;
     var maxNumber = 100;
     var secondi = 5;
+    var playerNumber;
+    var score = [];
 
     // Creazione numeri random da parte del computer
 
@@ -31,7 +33,6 @@ $(document).ready(function(){
     var timer = setInterval(function(){
         if (secondi == 0){
             randomNumber.hide();
-            alert('Adesso tocca a te!');
             clearInterval(timer);
 
         } else {
@@ -44,11 +45,22 @@ $(document).ready(function(){
 
     // Chiedi al giocatore di inserire per 5 volte un numero
 
+    setTimeout (gamestart, 6000);
 
-    //Check che la collezione di numeri sia compresa nei numeri generati dal computer
-
-    // Il software dice quali sono i numeri che sono stati indovinati
+    function gamestart () {
+        for (i = 0; i < 5; i++){
+            playerNumber = parseInt( prompt('Inserisci un numero'));
     
+            //Check se il numero inserito è compreso nei numeri generati dal computer 
+    
+            if (collectionNumbers.includes(playerNumber)){   
+                score.push(playerNumber);
+            }
+        } 
+        // Il software dice quali sono i numeri che sono stati indovinati
 
+        console.log('i numeri corretti da te inseriti sono ', score);
+        console.log('Hai indovinato nua quantità di numeri pari a ', score.length);
+    }
 
 }); // <--- end doc ready
